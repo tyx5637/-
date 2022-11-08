@@ -63,29 +63,29 @@
 ## 函数
 
 1. 函数类型签名，下列代码中(name: string) => number称为函数类型签名
+
    ```js
    const foo:(name: string) => number = function (name){
      return name.length;
    }
    ```
 
-    下面两种方式是等价的
+   下面两种方式是等价的
 
-    ```js
+   ```js
 
-    // 方式一：不建议使用，因为代码可读性比较差
+   // 方式一：不建议使用，因为代码可读性比较差
 
-    const foo:(name: string) => number = function (name){
-      return name.length;
-    }
+   const foo:(name: string) => number = function (name){
+     return name.length;
+   }
 
    // 方式二
    const foo = (name: string): number => {
-      return name.length;
+     return name.length;
    }
 
-    ```
-
+   ```
 2. 我们可以使用interface来进行函数声明
 
    ```js
@@ -164,7 +164,6 @@
    ![1667902433188](image/ts/1667902433188.png)
 
 - 在js中，对于object[prop]形式的访问会将数字索引访问转换为字符串索引访问，即obj[123]和obj['123']效果是一样的
-
 - 索引签名类型的一个常见场景是在重构 JavaScript 代码时，为内部属性较多的对象声明一个 any 的索引签名类型，以此来暂时支持 **对类型未明确属性的访问** ，并在后续一点点补全类型
 
   ![1667902594037](image/ts/1667902594037.png)
@@ -190,3 +189,9 @@
    ![1667903292786](image/ts/1667903292786.png)
 
    ![1667903305015](image/ts/1667903305015.png)
+
+### 类型查询操作符
+
+ts中typeof返回的是一个ts类型
+
+![1667906427858](image/ts/1667906427858.png)
